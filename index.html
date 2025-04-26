@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Даня Набиев - Магазин б/у вещей</title>
+  <style>
+    body { margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f2f2f2; }
+    header { background: #4CAF50; color: white; text-align: center; padding: 1rem; font-size: 2rem; font-weight: bold; }
+    main { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; padding: 20px; }
+    .card { background: white; border-radius: 15px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); overflow: hidden; display: flex; flex-direction: column; transition: transform 0.3s; }
+    .card:hover { transform: scale(1.03); }
+    .card img { width: 100%; height: 220px; object-fit: cover; }
+    .card-content { padding: 1rem; text-align: center; }
+    .card-content h2 { margin: 0.5rem 0; font-size: 1.2rem; }
+    .card-content p { color: #666; font-size: 0.9rem; }
+    .price { font-weight: bold; margin-top: 10px; font-size: 1rem; }
+    button { background: #4CAF50; color: white; border: none; padding: 10px 20px; margin-top: 10px; cursor: pointer; border-radius: 8px; transition: background 0.3s; }
+    button:hover { background: #45a049; }
+    @media (max-width: 600px) { header { font-size: 1.5rem; } }
+  </style>
+</head>
+<body>
+<header>Даня Набиев - Магазин Б/У вещей</header>
+<main>
+  <div class="card"><img src="images/tshirt.jpg" alt="Футболка"><div class="card-content"><h2>Футболка</h2><p>Почти новая футболка</p><div class="price">Цена: договорная</div><button>Купить</button></div></div>
+  <div class="card"><img src="images/sneakers.jpg" alt="Кроссовки"><div class="card-content"><h2>Кроссовки</h2><p>Стильные кроссовки</p><div class="price">Цена: договорная</div><button>Купить</button></div></div>
+  <div class="card"><img src="images/watch.jpg" alt="Часы"><div class="card-content"><h2>Часы</h2><p>Элегантные часы</p><div class="price">Цена: договорная</div><button>Купить</button></div></div>
+  <div class="card"><img src="images/ps4.jpg" alt="PS4"><div class="card-content"><h2>Игровая приставка PS4</h2><p>Полный комплект</p><div class="price">Цена: договорная</div><button>Купить</button></div></div>
+  <div class="card"><img src="images/laptop.jpg" alt="Ноутбук"><div class="card-content"><h2>Ноутбук ASUS</h2><p>Идеальное состояние</p><div class="price">Цена: договорная</div><button>Купить</button></div></div>
+  <div class="card"><img src="images/bike.jpg" alt="Велосипед"><div class="card-content"><h2>Велосипед Merida</h2><p>Почти новый велосипед</p><div class="price">Цена: договорная</div><button>Купить</button></div></div>
+  <div class="card"><img src="images/scooter.jpg" alt="Электросамокат"><div class="card-content"><h2>Электросамокат Xiaomi</h2><p>Мощный и быстрый</p><div class="price">Цена: договорная</div><button>Купить</button></div></div>
+</main>
+</body>
+</html>
