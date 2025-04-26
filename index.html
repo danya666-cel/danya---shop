@@ -1,0 +1,155 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Даня Набиев - Интернет-магазин</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f8f8f8;
+    }
+    header {
+      background-color: #4CAF50;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      font-size: 1.5rem;
+    }
+    main {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 1rem;
+    }
+    .product-card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      margin: 1rem;
+      width: 250px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      opacity: 0;
+      transform: translateY(50px);
+      animation: fadeInUp 0.8s forwards;
+    }
+    .product-card:nth-child(1) { animation-delay: 0.2s; }
+    .product-card:nth-child(2) { animation-delay: 0.4s; }
+    .product-card:nth-child(3) { animation-delay: 0.6s; }
+    .product-card:nth-child(4) { animation-delay: 0.8s; }
+    .product-card:nth-child(5) { animation-delay: 1.0s; }
+    .product-card:nth-child(6) { animation-delay: 1.2s; }
+    .product-card:nth-child(7) { animation-delay: 1.4s; }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .product-card h2 {
+      font-size: 1.2rem;
+      margin: 0.5rem 0;
+    }
+    .product-card p {
+      font-size: 0.9rem;
+      color: #555;
+      margin: 0.5rem;
+    }
+    .product-card .price {
+      font-weight: bold;
+      margin: 0.5rem 0;
+    }
+    .product-card button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      margin-bottom: 1rem;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+    .product-card button:hover {
+      background-color: #45a049;
+    }
+    @media (max-width: 600px) {
+      .product-card {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>Даня Набиев - Магазин б/у вещей</header>
+  <main class="products" id="products">
+    <div class="product-card">
+      <img src="https://images.unsplash.com/photo-1593032457867-5f142c50f87b?w=800" alt="Футболка">
+      <h2>Футболка</h2>
+      <p>Стильная футболка, 100% хлопок</p>
+      <span class="price">500</span> ₽
+      <button onclick="addToCart('Футболка', 500)">Купить</button>
+    </div>
+    <div class="product-card">
+      <img src="https://images.unsplash.com/photo-1596464716121-1b6f21aa330b?w=800" alt="Кроссовки">
+      <h2>Кроссовки</h2>
+      <p>Удобные для прогулок и спорта</p>
+      <span class="price">3000</span> ₽
+      <button onclick="addToCart('Кроссовки', 3000)">Купить</button>
+    </div>
+    <div class="product-card">
+      <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800" alt="Часы">
+      <h2>Часы</h2>
+      <p>Наручные часы с кожаным ремешком</p>
+      <span class="price">1500</span> ₽
+      <button onclick="addToCart('Часы', 1500)">Купить</button>
+    </div>
+    <div class="product-card">
+      <img src="https://images.unsplash.com/photo-1615739736315-61f96c0eb2ce?w=800" alt="Игровая приставка PS4">
+      <h2>Игровая приставка PS4</h2>
+      <p>Отличное состояние, 2 джойстика</p>
+      <span class="price">12000</span> ₽
+      <button onclick="addToCart('Игровая приставка PS4', 12000)">Купить</button>
+    </div>
+    <div class="product-card">
+      <img src="https://images.unsplash.com/photo-1618005198919-5c81d6610a2f?w=800" alt="Ноутбук ASUS">
+      <h2>Ноутбук ASUS</h2>
+      <p>i5, SSD 256GB, идеальный для работы</p>
+      <span class="price">18000</span> ₽
+      <button onclick="addToCart('Ноутбук ASUS', 18000)">Купить</button>
+    </div>
+    <div class="product-card">
+      <img src="https://images.unsplash.com/photo-1615302361180-ffbcdb0945c1?w=800" alt="Велосипед Merida">
+      <h2>Велосипед Merida</h2>
+      <p>Горный с амортизаторами</p>
+      <span class="price">25000</span> ₽
+      <button onclick="addToCart('Велосипед Merida', 25000)">Купить</button>
+    </div>
+    <div class="product-card">
+      <img src="https://images.unsplash.com/photo-1615397349219-7b3b5c39e4a5?w=800" alt="Электросамокат Xiaomi">
+      <h2>Электросамокат Xiaomi</h2>
+      <p>Запас хода 30км, удобный</p>
+      <span class="price">22000</span> ₽
+      <button onclick="addToCart('Электросамокат Xiaomi', 22000)">Купить</button>
+    </div>
+  </main>
+  <script>
+    function addToCart(product, price) {
+      alert(`Добавлено в корзину: ${product} за ${price} ₽`);
+    }
+  </script>
+</body>
+</html>
